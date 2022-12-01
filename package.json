@@ -1,0 +1,22 @@
+{
+  "name": "team-profile-generator-nodejs",
+  "version": "1.0.0",
+  "description": "A team profile generator.",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "npm run test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/crzn24/team-profile-generator-nodejs.git"
+  },
+  "author": "crzn24 Nathan Cruz",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/crzn24/team-profile-generator-nodejs/issues"
+  },
+  "homepage": "https://github.com/crzn24/team-profile-generator-nodejs#readme"
+}
