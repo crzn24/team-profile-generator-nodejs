@@ -10,9 +10,10 @@ const Engineer = require('./lib/Engineer');
 const Intern = require('./lib/Intern');
 
 // to render html page
-const generate = require('./src/html-template')
+const render = require('./src/html-template');
 
-
+// empty array for team members
+const teamArray = [];
 
 function initApp() {
 
@@ -78,7 +79,7 @@ function initApp() {
 
 
 
-    
+
 }
 
 
