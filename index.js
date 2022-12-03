@@ -18,7 +18,7 @@ const teamArray = [];
 
 
 
-function initApp() {
+function init() {
 
     // add a manager when starting up
     function addManager() {
@@ -139,7 +139,7 @@ function initApp() {
 
 
 
-    
+
 
     addManager();
 
@@ -152,4 +152,4 @@ function initApp() {
 
 
 
-initApp();
+init();
