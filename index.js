@@ -106,6 +106,16 @@ function initApp() {
     }
 
 
+    // function to add engineer if chosen
+
+
+
+
+
+
+
+
+    // function to add intern if chosen
 
 
 
@@ -123,6 +133,15 @@ function initApp() {
 
 
 
+
+
+
+
+
+
+    
+
+    addManager();
 
 }
 
