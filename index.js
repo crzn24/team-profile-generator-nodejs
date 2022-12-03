@@ -15,6 +15,9 @@ const render = require('./src/html-template');
 // empty array for team members
 const teamArray = [];
 
+
+
+
 function initApp() {
 
     // add a manager when starting up
@@ -66,11 +69,15 @@ function initApp() {
                 }  
             }
         ]).then(answers => {
-
+            const manager = new Manager(answers.managerName, answers.managerId, answers.managerEmail, answers.managerOfficeNumber);
+            teamArray.push(manager);
+            addTeamMember();
         });
     }
 
-
+    function addTeamMember() {
+        
+    }
 
 
 
