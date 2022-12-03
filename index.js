@@ -75,8 +75,34 @@ function initApp() {
         });
     }
 
+
+
+    // add additional team members to the team
     function addTeamMember() {
-        
+        inquirer.prompt([
+            {
+                type: "list",
+                name: "teamChoice",
+                message: "Which type of team member would you like to add?",
+                choices: [
+                    "Engineer",
+                    "Intern",
+                    "I'm done adding team members."
+                ]
+            },
+        ]).then(userChoice => {
+            switch(userChoice.teamChoice) {
+                case "Engineer":
+                    addEngineer();
+                    break;
+                case "Intern":
+                    addIntern();
+                    break;
+                default: 
+                    generateHTML();
+
+            }
+        });
     }
 
 
@@ -87,7 +113,23 @@ function initApp() {
 
 
 
+
+    // function to generate HTML page
+    function generateHTML() {
+
+    }
+
+
+
+
+
+
 }
+
+
+
+
+
 
 
 
