@@ -70,8 +70,8 @@ function init() {
             }
         ]).then(answers => {
             const manager = new Manager(answers.managerName, answers.managerId, answers.managerEmail, answers.managerOfficeNumber);
-            teamArray.push(manager);
-            addTeamMember();
+            teamArray.push(manager); //push to array
+            addTeamMember(); //add someone else
         });
     }
 
@@ -108,7 +108,56 @@ function init() {
 
     // function to add engineer if chosen
     function addEngineer() {
-
+        inquirer.prompt([
+            {
+                type: "input",
+                name: "engineerName",
+                message: "What is the engineer's name?",
+                validate: answer => {
+                    if (answer !== "") {
+                        return true;
+                    }
+                    return "Please enter the engineer's name.";
+                }
+            },
+            {
+                type: "input",
+                name: "engineerId",
+                message: "What is the engineer's ID?",
+                validate: answer => {
+                    if (answer !== "") {
+                        return true;
+                    }
+                    return "Please enter a valid ID for the engineer.";
+                }
+            },
+            {
+                type: "input",
+                name: "engineerEmail",
+                message: "What is the engineer's email?",
+                validate: answer => {
+                    if (answer !== "") {
+                        return true;
+                    }
+                    return "Please enter an email address for the engineer.";
+                }
+            },
+            {
+                type: "input",
+                name: "engineerGithub",
+                message: "What is the engineer's GitHub username?",
+                validate: answer => {
+                    if (answer !== "") {
+                        return true;
+                    }
+                    return "Please enter a GitHub username for the engineer.";
+                }
+            }
+        ]).then (answers => {
+            const engineer = new Engineer(answers.engineerName, answers.engineerId, answers.engineerEmail, answers.engineerGithub);
+            teamArray.push(engineer); //push to array
+            addTeamMember(); //add another team member
+        });
     }
 
 

@@ -1,5 +1,5 @@
 # team-profile-generator-nodejs
 
 
-switech statements 
+switch statements 
 https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/switch
