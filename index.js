@@ -107,7 +107,9 @@ function init() {
 
 
     // function to add engineer if chosen
+    function addEngineer() {
 
+    }
 
 
 
@@ -116,7 +118,9 @@ function init() {
 
 
     // function to add intern if chosen
-
+    function addIntern() {
+        
+    }
 
 
 
