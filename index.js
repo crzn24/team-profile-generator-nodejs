@@ -162,17 +162,59 @@ function init() {
 
 
 
-
-
-
-
     // function to add intern if chosen
     function addIntern() {
-        
+        inquirer.prompt([
+            {
+                type: "input",
+                name: "internName",
+                message: "What is the intern's name?",
+                validate: answer => {
+                    if (answer !== "") {
+                        return true;
+                    }
+                    return "Please enter the intern's name.";
+                }
+            },
+            {
+                type: "input",
+                name: "internId",
+                message: "What is the intern's ID?",
+                validate: answer => {
+                    if (answer !== "") {
+                        return true;
+                    }
+                    return "Please enter a valid ID for the intern.";
+                }
+            },
+            {
+                type: "input",
+                name: "internEmail",
+                message: "What is the intern's email?",
+                validate: answer => {
+                    if (answer !== "") {
+                        return true;
+                    }
+                    return "Please enter an email address for the intern.";
+                }
+            },
+            {
+                type: "input",
+                name: "internSchool",
+                message: "What is the intern's school?",
+                validate: answer => {
+                    if (answer !== "") {
+                        return true;
+                    }
+                    return "Please enter a school for the intern.";
+                }
+            }
+        ]).then (answers => {
+            const intern = new Intern(answers.internName, answers.internId, answers.internEmail, answers.internSchool);
+            teamArray.push(intern); //push to array
+            addTeamMember(); //add another team member
+        });
     }
-
-
-
 
 
 
