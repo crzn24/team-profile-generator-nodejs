@@ -108,4 +108,25 @@ const createCard = team => {
         };
 
 
+        // 
+        const html = [];
+
+        html.push(team
+            .filter(employee => employee.getRole() === 'Manager')
+            .map(manager => managerCard(manager))
+        );
+        html.push(team
+            .filter(employee => employee.getRole() === 'Engineer')
+            .map(engineer => engineerCard(engineer))
+            .join("")
+        );
+        html.push(team
+            .filter(employee => employee.getRole() === 'Intern')
+            .map(intern => engineerCard(engineer))
+            .join("")
+        );
+
+        return html.join("");
+
+
 }
