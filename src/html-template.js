@@ -52,21 +52,21 @@ const createCard = team => {
             return `
             <div class="card m-3 shadow"> 
                     <div class="card-header bg-primary text-white">
-                      <h3 class="card-title">Nathan</h3>
-                      <h4 class="card-text">Manager</h4>
+                      <h3 class="card-title">${manager.getName()}</h3>
+                      <h4 class="card-text">${manager.getRole()}</h4>
                     </div>
                     <div class="card-body bg-light">
                         <ul class="list-group list-group-flush border">
-                            <li class="list-group-item">ID: 123</li>
-                            <li class="list-group-item">Email: <a href="mailto:cruzn@uw.edu">cruzn@uw.edu</a></li>
-                            <li class="list-group-item">Office Number: 917</li>
+                            <li class="list-group-item">ID: ${manager.ID()}</li>
+                            <li class="list-group-item">Email: <a href="${manager.getEmail()}">${manager.getEmail()}</a></li>
+                            <li class="list-group-item">Office Number: ${manager.getOfficeNumber()}</li>
                           </ul>
                     </div>
                 </div>
             `;
         };
 
-        
+
     // engineer card html template
 
 
