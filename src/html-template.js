@@ -44,3 +44,35 @@ module.exports = (team) => {
 };
 
 
+// function to create team cards from template
+const createCard = team => {
+
+    //manager card html template
+        const managerCard = manager => {
+            return `
+            <div class="card m-3 shadow"> 
+                    <div class="card-header bg-primary text-white">
+                      <h3 class="card-title">Nathan</h3>
+                      <h4 class="card-text">Manager</h4>
+                    </div>
+                    <div class="card-body bg-light">
+                        <ul class="list-group list-group-flush border">
+                            <li class="list-group-item">ID: 123</li>
+                            <li class="list-group-item">Email: <a href="mailto:cruzn@uw.edu">cruzn@uw.edu</a></li>
+                            <li class="list-group-item">Office Number: 917</li>
+                          </ul>
+                    </div>
+                </div>
+            `;
+        };
+
+        
+    // engineer card html template
+
+
+
+
+
+
+
+}
