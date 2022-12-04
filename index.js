@@ -221,7 +221,7 @@ function init() {
 
     // function to generate HTML page
     function generateHTML() {
-
+        
         console.log("Creating your team...")
     }
 
