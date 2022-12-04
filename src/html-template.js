@@ -88,7 +88,24 @@ const createCard = team => {
 
 
 
-
+        // intern card html template
+        const internCard = intern => {
+            return `
+            <div class="card m-3 shadow">
+                    <div class="card-header bg-primary text-white">
+                      <h3 class="card-title">${intern.getName()}</h3>
+                      <h4 class="card-text">${intern.getRole()}</h4>
+                    </div>
+                    <div class="card-body bg-light">
+                        <ul class="list-group list-group-flush border">
+                            <li class="list-group-item">ID: ${intern.getId()}</li>
+                            <li class="list-group-item">Email: <a href="${intern.getEmail()}">${intern.getEmail()}</a></li>
+                            <li class="list-group-item">School: ${intern.getSchool()}</li>
+                          </ul>
+                    </div>
+                </div>  
+            `;
+        };
 
 
 }
