@@ -79,7 +79,7 @@ const createCard = team => {
                         <ul class="list-group list-group-flush border">
                             <li class="list-group-item">ID: ${engineer.getId()}</li>
                             <li class="list-group-item">Email: <a href="${engineer.getEmail()}">${engineer.getEmail()}</a></li>
-                            <li class="list-group-item">GitHub: <a href="https://github.com/${engineer.getGitHub()}">${engineer.getGitHub()}</a></li>
+                            <li class="list-group-item">GitHub: <a href="https://github.com/${engineer.getGithub()}">${engineer.getGithub()}</a></li>
                           </ul>
                     </div>
                 </div>
@@ -122,7 +122,7 @@ const createCard = team => {
         );
         html.push(team
             .filter(employee => employee.getRole() === 'Intern')
-            .map(intern => engineerCard(engineer))
+            .map(intern => internCard(intern))
             .join("")
         );
 
