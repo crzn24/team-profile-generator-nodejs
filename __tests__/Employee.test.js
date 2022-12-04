@@ -47,9 +47,6 @@ test('getRole() should return "Employee"', () => {
   expect(e.getRole()).toBe(testValue);
 });
 
-// test("makes an employee object", () => {
-//     const employee = new Employee("Luke");
-// });
 
 // Can instantiate Employee instance
 // Can set name via constructor arguments
