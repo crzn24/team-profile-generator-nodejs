@@ -221,16 +221,26 @@ function init() {
 
     // function to generate HTML page
     function generateHTML() {
-        
-        console.log("Creating your team...")
+        console.log("Creating your team...");
+        fs.writeFile('index.html', render(teamArray), function(err) {
+            if (err) throw err;
+            console.log('Your team is saved!');
+        });
     }
 
 
 
+    // function writeToFile(fileName, data) {
+    //     fs.writeFile(fileName, data, (err) =>
+    //     err ? console.error(err) : console.log("Here is your README!"));
+    // }
 
+    // .then((answers) => {
+    //     const template = (render(answers));
+    //     const filename = `${answers.filename}.md`
+    //     generateHTML(filename, template);
 
-
-
+   
 
 
 
