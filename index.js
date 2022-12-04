@@ -222,13 +222,11 @@ function init() {
     // function to generate HTML page
     function generateHTML() {
         console.log("Creating your team...");
-        fs.writeFile('index.html', render(teamArray), function(err) {
+        fs.writeFile('./dist/index.html', render(teamArray), function(err) {
             if (err) throw err;
             console.log('Your team is saved!');
         });
     }
-
-
 
     // function writeToFile(fileName, data) {
     //     fs.writeFile(fileName, data, (err) =>
@@ -240,22 +238,8 @@ function init() {
     //     const filename = `${answers.filename}.md`
     //     generateHTML(filename, template);
 
-   
-
-
-
-
-
-
     addManager();
 
 }
-
-
-
-
-
-
-
 
 init();
