@@ -57,7 +57,7 @@ const createCard = team => {
                     </div>
                     <div class="card-body bg-light">
                         <ul class="list-group list-group-flush border">
-                            <li class="list-group-item">ID: ${manager.ID()}</li>
+                            <li class="list-group-item">ID: ${manager.getId()}</li>
                             <li class="list-group-item">Email: <a href="${manager.getEmail()}">${manager.getEmail()}</a></li>
                             <li class="list-group-item">Office Number: ${manager.getOfficeNumber()}</li>
                           </ul>
@@ -68,7 +68,23 @@ const createCard = team => {
 
 
     // engineer card html template
-
+        const engineerCard = engineer => {
+            return `
+            <div class="card m-3 shadow">
+                    <div class="card-header bg-primary text-white">
+                      <h3 class="card-title">${engineer.getName()}</h3>
+                      <h4 class="card-text">${engineer.getRole()}</h4>
+                    </div>
+                    <div class="card-body bg-light">
+                        <ul class="list-group list-group-flush border">
+                            <li class="list-group-item">ID: ${engineer.getId()}</li>
+                            <li class="list-group-item">Email: <a href="${engineer.getEmail()}">${engineer.getEmail()}</a></li>
+                            <li class="list-group-item">GitHub: <a href="https://github.com/${engineer.getGitHub()}">${engineer.getGitHub()}</a></li>
+                          </ul>
+                    </div>
+                </div>
+            `;
+        };
 
 
 
